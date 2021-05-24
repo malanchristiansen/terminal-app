@@ -14,22 +14,22 @@
 #         1. get the item price and calulate the bill
 #     2. if the user want to exit the app, then display the exit msg and exit the app
 
-require_relative "../customer_order.rb"
+require_relative "customer_order.rb"
 
 # instance of customer class
 customer = CustomerOrder.new("John")
 
 # call the welcome msg and the menu method 
 customer.welcome_msg
-customer.menu 
 ordering = true 
+customer.menu 
 while ordering 
 #get user input
     user_choice = gets.chomp.to_i  
 
     case user_choice
         when 1,2,3
-            customer.place_order(user_choice)
+            return customer.place_order(user_choice)
         when 0 
             ordering = false 
             puts "Thanks for visiting, #{customer.name}. Your bill is #{customer.bill}"

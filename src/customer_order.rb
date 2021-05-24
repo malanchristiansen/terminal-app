@@ -29,8 +29,9 @@ class CustomerOrder
     end 
 
     def place_order(user_choice)
-        get get_item_price(user_choice)
+        get_item_price(user_choice)
         get_quantity
         calculate_bill
+        puts "Here is your bill: $#{@bill}"
     end 
 end 
