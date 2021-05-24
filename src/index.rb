@@ -32,8 +32,8 @@ while ordering
             return customer.place_order(user_choice)
         when 0 
             ordering = false 
-            puts "Thanks for visiting, #{customer.name}. Your bill is #{customer.bill}"
+            puts "Thanks for visiting, #{customer.name}. Your bill is #{customer.bill}".colorize(:green)
         else 
-            puts "Invalid choice, please type 1,2,3 or exit to leave the app"
+            puts "Invalid choice, please type 1,2,3 or exit to leave the app".colorize(:red)
     end 
 end 
