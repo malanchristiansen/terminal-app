@@ -1,5 +1,4 @@
 require 'colorize'
-require 'colorized_string'
 
 class CustomerOrder
     attr_reader :bill, :name  
