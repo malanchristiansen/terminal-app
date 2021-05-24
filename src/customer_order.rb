@@ -33,5 +33,6 @@ class CustomerOrder
         get_quantity
         calculate_bill
         puts "Here is your bill: $#{@bill}"
+        puts "Enjoy your beer!"
     end 
 end 
