@@ -1,3 +1,6 @@
+require 'colorize'
+require 'colorized_string'
+
 class CustomerOrder
     attr_reader :bill, :name  
     def initialize(name)
@@ -5,10 +8,10 @@ class CustomerOrder
         @bill = 0 
     end 
     def welcome_msg
-        p "Welcome to this craft beer menu, choose a delicious beer from the menu or exit the menu"
+        puts "Welcome to this craft beer menu, choose a delicious beer from the menu or exit the menu".colorize(:yellow)
     end 
     def menu 
-        menu_items = {"1. Bentspoke's Crankshaft IPA" => 12, "2. Young Henry's New Towner Australian Pale Ale" => 8, "3. Philter Brewing's Red Session Ale" => 10} 
+        menu_items = {"1. Bentspoke's Crankshaft IPA" => 12, "2. Young Henry's New Towner Australian Pale Ale" => 8, "3. Philter Brewing's Red Session Ale" => 10}
         # update the menu list (contains item number and price) with the right price if the menu items are updated otherwise CODE WILL NOT WORK
         @menu_list = {1 => 12, 2 => 8, 3 => 10}
         menu_items.each do |item, price|
@@ -20,7 +23,7 @@ class CustomerOrder
     end 
 
     def get_quantity
-        puts "How many would you like?"
+        puts "How many would you like?".colorize(:blue)
         @quantity = gets.chomp.to_i
     end 
 
@@ -32,7 +35,7 @@ class CustomerOrder
         get_item_price(user_choice)
         get_quantity
         calculate_bill
-        puts "Here is your bill: $#{@bill}"
-        puts "Enjoy your beer!"
+        puts "Here is your bill: $#{@bill}".colorize(:yellow)
+        puts "Enjoy your beer!".colorize(:blue)
     end 
 end 
