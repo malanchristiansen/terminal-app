@@ -20,7 +20,7 @@ require_relative "customer_order.rb"
 customer = CustomerOrder.new("John")
 
 a = Artii::Base.new :font => 'slant'
-a.asciify('Art!')
+puts a.asciify('Beer Time!')
 
 box = TTY::Box.frame(width: 30, height: 3) do
     "Welcome to this BEER MENU"
@@ -35,7 +35,7 @@ sleep(2)
 ordering = true 
 
 rows = customer.menu
-table = Terminal::Table.new :headings => ['Beer on tap', 'price $'], :rows => rows
+table = Terminal::Table.new :title => "BEER MENU", :headings => ['Beer on tap', 'price $'], :rows => rows
 puts table 
 
 while ordering 
