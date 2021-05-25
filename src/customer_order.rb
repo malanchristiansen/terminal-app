@@ -38,7 +38,7 @@ class CustomerOrder
         get_item_price(user_choice)
         get_quantity
         calculate_bill
-        puts "Here is your bill: $#{@bill}".colorize(:yellow)
+        puts "Thanks for visiting! Here is your bill: $#{@bill}".colorize(:yellow)
         sleep(2)
         puts "Enjoy your beer!".colorize(:blue)
     end 

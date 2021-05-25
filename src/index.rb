@@ -21,11 +21,11 @@ customer = CustomerOrder.new("John")
 
 a = Artii::Base.new :font => 'slant'
 puts a.asciify('Beer Time!')
+sleep(2)
 
 box = TTY::Box.frame(width: 30, height: 3) do
     "Welcome to this BEER MENU"
 end
-
 print box 
 sleep(2)
 
@@ -47,7 +47,7 @@ while ordering
             return customer.place_order(user_choice)
         when 0 
             ordering = false 
-            puts "Thanks for visiting, #{customer.name}. Your bill is $#{customer.bill}".colorize(:green)
+            puts "Thanks for visiting! Your bill is $#{customer.bill}".colorize(:green)
         else 
             puts "Invalid choice, please type 1,2,3 or exit to leave the app".colorize(:red)
     end 
