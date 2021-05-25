@@ -19,8 +19,8 @@ require_relative "customer_order.rb"
 # instance of customer class
 customer = CustomerOrder.new("John")
 
-# box = TTY::Box.frame "Welcome to this", "BEER MENU", padding: 3, align: :center
-# print box 
+a = Artii::Base.new :font => 'slant'
+a.asciify('Art!')
 
 box = TTY::Box.frame(width: 30, height: 3) do
     "Welcome to this BEER MENU"
