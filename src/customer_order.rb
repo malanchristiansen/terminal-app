@@ -2,6 +2,7 @@ require 'colorize'
 require 'sleep2'
 require 'tty-box'
 require 'terminal-table'
+require 'artii'
 
 class CustomerOrder
     attr_reader :bill, :name  
@@ -17,7 +18,7 @@ class CustomerOrder
         # update the menu list (contains item number and price) with the right price if the menu items are updated otherwise CODE WILL NOT WORK
         @menu_list = {1 => 12, 2 => 8, 3 => 10}
         menu_items.each do |item, price|
-            puts "#{item}: $#{price}"
+            "#{item}: $#{price}"
         end 
     end 
     def get_item_price(user_choice)
