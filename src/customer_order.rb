@@ -1,6 +1,7 @@
 require 'colorize'
 require 'sleep2'
 require 'tty-box'
+require 'terminal-table'
 
 class CustomerOrder
     attr_reader :bill, :name  
