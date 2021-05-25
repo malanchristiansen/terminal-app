@@ -17,7 +17,7 @@ describe CustomerOrder do
         expect(@customer.name).to eq("John")
     end 
     it "displays welcome message" do 
-        msg = "Welcome to this craft beer menu, choose a delicious beer from the menu or exit the menu"
+        msg = "Choose a delicious beer from the menu or exit the menu"
         expect(@customer.welcome_msg).to eq(msg)
     end 
     it "display the menu" do 

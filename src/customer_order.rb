@@ -1,4 +1,6 @@
 require 'colorize'
+require 'sleep2'
+require 'tty-box'
 
 class CustomerOrder
     attr_reader :bill, :name  
@@ -7,7 +9,7 @@ class CustomerOrder
         @bill = 0 
     end 
     def welcome_msg
-        puts "Welcome to this craft beer menu, choose a delicious beer from the menu or exit the menu".colorize(:yellow)
+        puts "Choose a delicious beer from the menu or exit the menu".colorize(:yellow)
     end 
     def menu 
         menu_items = {"1. Bentspoke's Crankshaft IPA" => 12, "2. Young Henry's New Towner Australian Pale Ale" => 8, "3. Philter Brewing's Red Session Ale" => 10}
@@ -35,6 +37,7 @@ class CustomerOrder
         get_quantity
         calculate_bill
         puts "Here is your bill: $#{@bill}".colorize(:yellow)
+        sleep(2)
         puts "Enjoy your beer!".colorize(:blue)
     end 
 end 
