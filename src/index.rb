@@ -34,7 +34,10 @@ customer.welcome_msg
 sleep(2)
 ordering = true 
 
-customer.menu 
+rows = customer.menu
+table = Terminal::Table.new :headings => ['Beer on tap', 'price $'], :rows => rows
+puts table 
+
 while ordering 
 #get user input
     user_choice = gets.chomp.to_i  
