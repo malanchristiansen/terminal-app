@@ -45,7 +45,8 @@ while ordering
 
     case user_choice
         when 1,2,3
-            return customer.place_order(user_choice)
+            customer.place_order(user_choice)
+            ordering = false
         when 0 
             ordering = false 
             puts "Thanks for visiting! Your bill is $#{customer.bill}".colorize(:green)
