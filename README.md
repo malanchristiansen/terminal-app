@@ -1,10 +1,10 @@
 # Terminal Application
 
-This application is a beer menu!
+This app is a beer menu built in Ruby!
 
 ![beer](https://media.giphy.com/media/fMzywf5la8CDPuW9AE/giphy.gif)
 
-## source control repository
+## Source control repository
 
 Link to GitHub repository: [terminal-app](https://github.com/malanchristiansen/terminal-app)
 
@@ -43,7 +43,7 @@ Link to GitHub repository: [terminal-app](https://github.com/malanchristiansen/t
 
 ## Outline of user interaction
 
-- User runs the script run_app.sh
+- User runs the script run_app.sh in terminal
 - User is displayed a welcome message incl. title, welcome, and statememt, which is displayed with 2 seconds in between
 - The last statement asks the user to choose a number between 1, 2, 3 or exit. The numbers represent a beer item shown on the menu and exit means that the user can exit the app. The user can type the choice directly in the terminal. A while loops is implemented to handle teh user input.
   - If the user chooses one of these numbers, the user is asked about the order quantity.
@@ -54,6 +54,8 @@ Link to GitHub repository: [terminal-app](https://github.com/malanchristiansen/t
 - When the user has typed choice and quantity into the terminal, the user is displayed the calculated final bill and a goodbye message. Then app stop running.
 
 ## Control flow
+
+![flowchart](./docs/flowchart_beerapp.png)
 
 ## Implementation plan
 
