@@ -1,5 +1,4 @@
 require 'colorize'
-require 'sleep2'
 require 'tty-box'
 require 'terminal-table'
 require 'artii'
@@ -11,7 +10,7 @@ class CustomerOrder
         @bill = 0 
     end 
     def welcome_msg
-        puts "Choose a delicious beer from the menu or exit the menu".colorize(:yellow)
+        "Choose a delicious beer from the menu or exit the menu".colorize(:yellow)
     end 
     def menu 
         menu_items = {"1. Bentspoke's Crankshaft IPA" => 12, "2. Young Henry's New Towner Australian Pale Ale" => 8, "3. Philter Brewing's Red Session Ale" => 10}
@@ -27,7 +26,15 @@ class CustomerOrder
 
     def get_quantity
         puts "How many would you like?".colorize(:blue)
-        @quantity = gets.chomp.to_i
+        begin
+            @quantity = gets.chomp.to_i
+            if @quantity == 0 
+                raise TypeError 
+            end 
+        rescue 
+            puts "Please type a number greater than 0"
+            retry 
+        end 
     end 
 
     def calculate_bill

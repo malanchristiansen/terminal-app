@@ -30,7 +30,7 @@ print box
 sleep(2)
 
 # call the welcome msg and the menu method 
-customer.welcome_msg
+puts customer.welcome_msg
 sleep(2)
 ordering = true 
 
