@@ -20,7 +20,7 @@ Link to GitHub repository: [terminal-app](https://github.com/malanchristiansen/t
 
 ## Features
 
-1. Displays a welcome message incl. title, welcome, and statememt to choose a beer
+1. Displays a welcome message incl. title, welcome, and statement to choose a beer
    - For the title, the gem being used is [artii](https://github.com/miketierney/artii)
    - The welcome to the beer menu statement uses the gem [tty-box](https://github.com/piotrmurach/tty-box)
    - The welcome message asking the customer to order uses the gem [colorize](https://github.com/fazibear/colorize)
@@ -63,6 +63,7 @@ Trello: [Terminal Application Board](https://trello.com/b/f3tfLiOg/terminal-appl
 
 ## Instructions for application use
 
-1. Download app from GitHub: [terminal-app](https://github.com/malanchristiansen/terminal-app)
+1. Download app from GitHub: [terminal-app](https://github.com/malanchristiansen/terminal-app) incl. all files
+1. Switch into source directory `cd src`
 1. Run `bundle install` to install required gems
 1. Run bash script `./run_app.sh`
