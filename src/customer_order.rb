@@ -32,9 +32,11 @@ class CustomerOrder
                 raise TypeError 
             end 
         rescue 
-            puts "Please type a number greater than 0"
+            p "Please type a number greater than 0"
             retry 
         end 
+        #returning the quantity as the test case is returning nil
+        return @quantity
     end 
 
     def calculate_bill

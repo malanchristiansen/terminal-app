@@ -31,6 +31,8 @@ describe CustomerOrder do
         expect(@customer.get_item_price(user_choice)).to eq(12)
     end 
     it "should get the quantity" do 
+        result = @customer.get_quantity
+        p result 
         expect(@customer.get_quantity).to be > 0
     end 
 
@@ -41,3 +43,5 @@ describe CustomerOrder do
         expect(@customer.calculate_bill).to eq(final_bill)
     end 
 end 
+
+
