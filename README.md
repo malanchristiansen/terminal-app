@@ -37,7 +37,7 @@ Link to GitHub repository: [terminal-app](https://github.com/malanchristiansen/t
 1. Exit option: user can quit menu
    - For this feature, a while loop is being used. If the customer types exit it converts it to an integer 0, which displays the exit message. The method gets is used again to get the user input exit and .to_i is used convert the string to an integer.
 1. Error handling: user is helped with invalid input
-   - Error handling is being used when the app prompts the user for quantity. If the user types 0 or a string it is converted to and integer and a message is displayed to let the user retry to type a correct value.
+   - Error handling is being used when the app prompts the user for quantity. If the user types 0 or a string it is converted to an integer and a message is displayed to let the user retry to type a correct value.
 
 ![beer](https://media.giphy.com/media/xTiTny1nYrk4cQUQ4U/giphy.gif)
 

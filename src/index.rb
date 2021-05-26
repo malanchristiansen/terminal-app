@@ -32,12 +32,13 @@ sleep(2)
 # call the welcome msg and the menu method 
 puts customer.welcome_msg
 sleep(2)
-ordering = true 
+
 
 rows = customer.menu
 table = Terminal::Table.new :title => "BEER MENU", :headings => ['Beer on tap', 'price $'], :rows => rows
 puts table 
 
+ordering = true 
 while ordering 
 #get user input
     user_choice = gets.chomp.to_i  
@@ -52,3 +53,4 @@ while ordering
             puts "Invalid choice, please type 1,2,3 or exit to leave the app".colorize(:red)
     end 
 end 
+
