@@ -1,6 +1,8 @@
 # Terminal Application
 
-This application is a beer craft menu that helps the user decide which beers to order.
+This application is a beer menu!
+
+![beer](https://media.giphy.com/media/fMzywf5la8CDPuW9AE/giphy.gif)
 
 ## source control repository
 
@@ -24,7 +26,7 @@ Link to GitHub repository: [terminal-app](https://github.com/malanchristiansen/t
    - The welcome message asking the customer to order uses the gem [colorize](https://github.com/fazibear/colorize)
 1. Menu options: displays beer menu of 3 beers
    - The beer menu is shown using the gem [terminal-table](https://github.com/tj/terminal-table)
-1. User input: prompts user for an order
+1. User input: prompts user for an order. A while loop is implemented to handle the user input.
    - To get the users input, the method gets is being used
 1. User input: prompts user for quantity of selected beer
    - To get the users input for quantity, the method gets is also being used
@@ -37,12 +39,28 @@ Link to GitHub repository: [terminal-app](https://github.com/malanchristiansen/t
 1. Error handling: user is helped with invalid input
    - Error handling is being used when the app prompts the user for quantity. If the user types 0 or a string it is converted to and integer and a message is displayed to let the user retry to type a correct value.
 
+![beer](https://media.giphy.com/media/xTiTny1nYrk4cQUQ4U/giphy.gif)
+
 ## Outline of user interaction
+
+- User runs the script run_app.sh
+- User is displayed a welcome message incl. title, welcome, and statememt, which is displayed with 2 seconds in between
+- The last statement asks the user to choose a number between 1, 2, 3 or exit. The numbers represent a beer item shown on the menu and exit means that the user can exit the app. The user can type the choice directly in the terminal. A while loops is implemented to handle teh user input.
+  - If the user chooses one of these numbers, the user is asked about the order quantity.
+  - If the user types exit, the user exits the app and is displayed a goodbye message before the app stops running.
+  - If user types an invalid value, e.g. a number that is not on the menu, the user is displayed a message that tells which numbers the user can choose or if the user wants to exit.
+- The second message is displayed when the user has typed a valid number in the terminal that represents the choice of beer.
+  - Error handling is implemented to help the user if teh user types a string instead of a number. E.g. the user is asked about the quantity of beer and the user types "many", this will display a message asking the user to try again and type a number.
+- When the user has typed choice and quantity into the terminal, the user is displayed the calculated final bill and a goodbye message. Then app stop running.
 
 ## Control flow
 
 ## Implementation plan
 
-Project management platform: Trello - [Board](https://trello.com/b/f3tfLiOg/terminal-application)
+Trello: [Terminal Application Board](https://trello.com/b/f3tfLiOg/terminal-application)
 
 ## Instructions for application use
+
+1. Download app from GitHub: [terminal-app](https://github.com/malanchristiansen/terminal-app)
+1. Run `bundle install` to install required gems
+1. Run bash script `./run_app.sh`
